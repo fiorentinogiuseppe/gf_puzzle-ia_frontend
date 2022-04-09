@@ -1,5 +1,5 @@
 # Puzzle AI
-## Group Formation - Puzzle IA - Backend
+## Group Formation - Puzzle IA - Frontend
 
 This repository is the official implementation of [Formation of groups of students based on multiple criteria
 ](https://www.br-ie.org/pub/index.php/sbie/article/view/7692) (in portuguese: Formação de grupos de alunos baseado em múltiplos critérios
