@@ -60,7 +60,6 @@ class GeneratedSignUpWidgetState extends State<GeneratedSignUpWidget> {
                     setState(() {
                       nome = newVal;
                     });
-                    print(nome);
                   },
                 ), // Nome
               ),
@@ -77,7 +76,6 @@ class GeneratedSignUpWidgetState extends State<GeneratedSignUpWidget> {
                     setState(() {
                       email = newVal;
                     });
-                    print(email);
                   },
                 ), // Email
               ),
@@ -94,7 +92,6 @@ class GeneratedSignUpWidgetState extends State<GeneratedSignUpWidget> {
                     setState(() {
                       passwd = newVal;
                     });
-                    print(passwd);
                   },
                 ), // Password
               ),
