@@ -25,7 +25,7 @@ class Pluzzle_IAApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //initialRoute: '/GeneratedSignUpWidget',
-      initialRoute: '/GeneratedLogInWidget',
+      initialRoute: '/GeneratedSignUpWidget',
       routes: {
         '/GeneratedSignUpWidget': (context) => GeneratedSignUpWidget(),
         '/GeneratedLogInWidget': (context) => GeneratedLogInWidget(),

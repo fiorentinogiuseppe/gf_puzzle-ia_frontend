@@ -54,7 +54,15 @@ class GeneratedSignUpWidgetState extends State<GeneratedSignUpWidget> {
                 bottom: null,
                 width: 343.0,
                 height: 50.0,
-                child: GeneratedInputTextWidget(), // Nome
+                child: GeneratedInputTextWidget(
+                  nome: nome,
+                  onChange: (newVal) {
+                    setState(() {
+                      nome = newVal;
+                    });
+                    print(nome);
+                  },
+                ), // Nome
               ),
               Positioned(
                 left: 16.0,
@@ -63,7 +71,15 @@ class GeneratedSignUpWidgetState extends State<GeneratedSignUpWidget> {
                 bottom: null,
                 width: 343.0,
                 height: 50.0,
-                child: GeneratedInputTextWidget1(), // Email
+                child: GeneratedInputTextWidget1(
+                  email: email,
+                  onChange: (newVal) {
+                    setState(() {
+                      email = newVal;
+                    });
+                    print(email);
+                  },
+                ), // Email
               ),
               Positioned(
                 left: 16.0,
@@ -72,7 +88,15 @@ class GeneratedSignUpWidgetState extends State<GeneratedSignUpWidget> {
                 bottom: null,
                 width: 343.0,
                 height: 50.0,
-                child: GeneratedInputTextWidget2(), // Password
+                child: GeneratedInputTextWidget2(
+                  passwd: passwd,
+                  onChange: (newVal) {
+                    setState(() {
+                      passwd = newVal;
+                    });
+                    print(passwd);
+                  },
+                ), // Password
               ),
               Positioned(
                 left: 16.0,
@@ -81,7 +105,8 @@ class GeneratedSignUpWidgetState extends State<GeneratedSignUpWidget> {
                 bottom: null,
                 width: 343.0,
                 height: 51.0,
-                child: GeneratedButtonPrimaryWidget(), // SignUp
+                child: GeneratedButtonPrimaryWidget(
+                    passwd: passwd, email: email, nome: nome), // SignUp
               ),
               // Positioned(
               //   left: 99.0,

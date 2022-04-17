@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
   */
 
 class GeneratedInputTextWidget1 extends StatefulWidget {
+  String email;
+  final onChange;
+  GeneratedInputTextWidget1({this.email, this.onChange});
+
   @override
   State<GeneratedInputTextWidget1> createState() {
     return GeneratedInputTextWidget1State();
@@ -21,7 +25,7 @@ class GeneratedInputTextWidget1State extends State<GeneratedInputTextWidget1> {
           Stack(fit: StackFit.expand, alignment: Alignment.center, children: [
         TextFormField(
           onChanged: (text) {
-            print(text);
+            widget.onChange(text);
           },
           keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(

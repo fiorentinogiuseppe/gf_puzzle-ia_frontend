@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 class GeneratedRightWidget1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Visibility(
-      visible: false,
+    return TextButton(
+      onPressed: () {
+        Navigator.pushNamed(context, '/GeneratedSignUpWidget');
+      },
       child: Text(
-        '''Right''',
+        '''Back''',
         overflow: TextOverflow.visible,
         textAlign: TextAlign.left,
         style: TextStyle(
@@ -17,7 +19,7 @@ class GeneratedRightWidget1 extends StatelessWidget {
           fontSize: 16.0,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w500,
-          color: Color.fromARGB(255, 93, 176, 116),
+          color: Color.fromARGB(255, 137, 124, 172),
 
           /* letterSpacing: 0.0, */
         ),

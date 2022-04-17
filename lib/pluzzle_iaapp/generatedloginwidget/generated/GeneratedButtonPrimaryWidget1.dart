@@ -7,12 +7,13 @@ import 'package:flutterapp/pluzzle_iaapp/generatedloginwidget/generated/Generate
 class GeneratedButtonPrimaryWidget1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 343.0,
-      height: 51.0,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100.0),
+    return OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        side: BorderSide(width: 5.0, color: Color.fromARGB(0, 33, 149, 243)),
       ),
+      onPressed: () {
+        print("click");
+      },
       child: Stack(
           fit: StackFit.expand,
           alignment: Alignment.center,

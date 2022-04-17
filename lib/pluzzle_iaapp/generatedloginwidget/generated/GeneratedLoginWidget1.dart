@@ -9,7 +9,7 @@ class GeneratedLoginWidget1 extends StatelessWidget {
     return Visibility(
       visible: false,
       child: Text(
-        '''Login''',
+        '''Chama''',
         overflow: TextOverflow.visible,
         textAlign: TextAlign.right,
         style: TextStyle(

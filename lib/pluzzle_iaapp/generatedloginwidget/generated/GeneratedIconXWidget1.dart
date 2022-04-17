@@ -10,7 +10,7 @@ class GeneratedIconXWidget1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: false,
+      visible: true,
       child: TransformHelper.rotate(
           a: 0.71,
           b: 0.71,

@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
   */
 
 class GeneratedInputTextWidget extends StatefulWidget {
+  String nome;
+  final onChange;
+  GeneratedInputTextWidget({this.nome, this.onChange});
+
   @override
   State<GeneratedInputTextWidget> createState() {
     return GeneratedInputTextWidgetState();
@@ -21,7 +25,7 @@ class GeneratedInputTextWidgetState extends State<GeneratedInputTextWidget> {
           Stack(fit: StackFit.expand, alignment: Alignment.center, children: [
         TextFormField(
           onChanged: (text) {
-            print(text);
+            widget.onChange(text);
           },
           decoration:
               InputDecoration(labelText: "Nome", border: OutlineInputBorder()),

@@ -12,39 +12,17 @@ class GeneratedInputTextWidget3 extends StatelessWidget {
     return Container(
       width: 343.0,
       height: 50.0,
-      child: Stack(
-          fit: StackFit.expand,
-          alignment: Alignment.center,
-          overflow: Overflow.visible,
-          children: [
-            Positioned(
-              left: 0.0,
-              top: 0.0,
-              right: null,
-              bottom: null,
-              width: 343.0,
-              height: 50.0,
-              child: GeneratedBGWidget10(),
-            ),
-            Positioned(
-              left: 16.0,
-              top: 16.0,
-              right: null,
-              bottom: null,
-              width: 46.0,
-              height: 24.0,
-              child: GeneratedEmailWidget1(),
-            ),
-            Positioned(
-              left: 284.0,
-              top: 16.0,
-              right: null,
-              bottom: null,
-              width: 48.0,
-              height: 24.0,
-              child: GeneratedShowWidget3(),
-            )
-          ]),
+      child:
+          Stack(fit: StackFit.expand, alignment: Alignment.center, children: [
+        TextFormField(
+          onChanged: (text) {
+            print(text);
+          },
+          keyboardType: TextInputType.emailAddress,
+          decoration: InputDecoration(
+              labelText: "E-mail", border: OutlineInputBorder()),
+        )
+      ]),
     );
   }
 }
