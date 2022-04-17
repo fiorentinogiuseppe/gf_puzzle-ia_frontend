@@ -7,33 +7,30 @@ import 'package:flutterapp/pluzzle_iaapp/generatedsignupwidget/generated/Generat
 class GeneratedButtonPrimaryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 343.0,
-      height: 51.0,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100.0),
-      ),
-      child: Stack(
-          fit: StackFit.expand,
-          alignment: Alignment.center,
-          overflow: Overflow.visible,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(100.0),
-              child: Container(
-                color: Color.fromARGB(255, 137, 124, 172),
-              ),
+    return OutlinedButton(
+        style: OutlinedButton.styleFrom(
+          side: BorderSide(width: 5.0, color: Color.fromARGB(0, 33, 149, 243)),
+        ),
+        onPressed: () {
+          print("click");
+        },
+        child:
+            Stack(fit: StackFit.expand, alignment: Alignment.center, children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(100.0),
+            child: Container(
+              color: Color.fromARGB(255, 137, 124, 172),
             ),
-            Positioned(
-              left: 141.0,
-              top: 16.0,
-              right: null,
-              bottom: null,
-              width: 63.0,
-              height: 21.0,
-              child: GeneratedSignUpWidget2(),
-            )
-          ]),
-    );
+          ),
+          Positioned(
+            left: 141.0,
+            top: 16.0,
+            right: null,
+            bottom: null,
+            width: 63.0,
+            height: 21.0,
+            child: GeneratedSignUpWidget2(),
+          ),
+        ]));
   }
 }

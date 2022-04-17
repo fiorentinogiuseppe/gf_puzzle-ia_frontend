@@ -6,19 +6,23 @@ import 'package:flutter/material.dart';
 class GeneratedLoginWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text(
-      '''Login''',
-      overflow: TextOverflow.visible,
-      textAlign: TextAlign.right,
-      style: TextStyle(
-        height: 1.171875,
-        fontSize: 16.0,
-        fontFamily: 'Inter',
-        fontWeight: FontWeight.w500,
-        color: Color.fromARGB(255, 137, 124, 172),
+    return TextButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/GeneratedLogInWidget');
+        },
+        child: Text(
+          '''Login''',
+          overflow: TextOverflow.visible,
+          textAlign: TextAlign.right,
+          style: TextStyle(
+            height: 1.171875,
+            fontSize: 16.0,
+            fontFamily: 'Inter',
+            fontWeight: FontWeight.w500,
+            color: Color.fromARGB(255, 137, 124, 172),
 
-        /* letterSpacing: 0.0, */
-      ),
-    );
+            /* letterSpacing: 0.0, */
+          ),
+        ));
   }
 }
