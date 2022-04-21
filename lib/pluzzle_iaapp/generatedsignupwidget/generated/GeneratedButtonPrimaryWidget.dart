@@ -27,37 +27,37 @@ class GeneratedButtonPrimaryWidgetState
         style: OutlinedButton.styleFrom(
           side: BorderSide(width: 5.0, color: Color.fromARGB(0, 33, 149, 243)),
         ),
-        onPressed: () {
-          // https://docs.flutter.dev/cookbook/networking/send-data
-          final response = http.post(
-            Uri.parse('https://gfpuzzle-ia.herokuapp.com/ping'),
+        onPressed: () async {
+          print({
+            "email": widget.email,
+            "name": widget.nome,
+            "password": widget.passwd
+          });
+
+          //https://docs.flutter.dev/cookbook/networking/send-data
+          var response = await http.post(
+            Uri.parse('https://gfpuzzle-ia.herokuapp.com/save_user'),
             headers: <String, String>{
               'Content-Type': 'application/json; charset=UTF-8',
             },
-            body: jsonEncode(<String, String>{}),
+            body: jsonEncode(<String, String>{
+              "email": widget.email,
+              "name": widget.nome,
+              "password": widget.passwd
+            }),
           );
 
-          // http.post(
-          //   Uri.parse('https://gfpuzzle-ia.herokuapp.com/ping'),
-          //   headers: <String, String>{
-          //     'Content-Type': 'application/json; charset=UTF-8',
-          //   },
-          //   body: jsonEncode(<String, String>{
-          //     'email': widget.email,
-          //     'passwd': widget.passwd,
-          //     'nome': widget.nome,
-          //   }),
-          // );
-          // if (){
-          //   throw Exception('BarException');
-          // }
-
-          print(response);
-          print("click start");
-          print(widget.passwd);
-          print(widget.email);
-          print(widget.nome);
-          print("click end");
+          print(response.statusCode);
+          print(response.body);
+          if (response.statusCode == 200) {
+            // If the server did return a 200 OK response,
+            // then parse the JSON.
+            Navigator.pushNamed(context, '/GeneratedLogInWidget');
+          } else {
+            // If the server did not return a 200 OK response,
+            // then throw an exception.
+            throw Exception('Failed to create account.');
+          }
         },
         child:
             Stack(fit: StackFit.expand, alignment: Alignment.center, children: [
