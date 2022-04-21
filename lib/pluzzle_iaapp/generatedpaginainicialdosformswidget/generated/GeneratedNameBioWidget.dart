@@ -25,15 +25,6 @@ class GeneratedNameBioWidget extends StatelessWidget {
               height: 38.0,
               child: GeneratedMariaJoaquinaWidget(),
             ),
-            Positioned(
-              left: 19.0,
-              top: 44.0,
-              right: null,
-              bottom: null,
-              width: 187.0,
-              height: 21.0,
-              child: GeneratedCinciadaComputaoWidget(),
-            )
           ]),
     );
   }
